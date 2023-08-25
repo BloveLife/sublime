@@ -41,7 +41,6 @@ body {
     overflow: auto;
     background-image: linear-gradient(-225deg, #893fac 0%, #B8DCFF 75%);
     opacity: 0.2;
-    .bl-margin-lr;
 }
 
 .box-side {
@@ -93,7 +92,32 @@ body {
     border-bottom: @bl-border;
 }
 
-.bl-margin-lr {
+.bl-margin {
+    margin: @bl-margin;
+}
+
+.bl-margin-left {
     margin-left: @bl-margin;
+}
+
+.bl-margin-right {
     margin-right: @bl-margin;
+}
+
+.bl-margin-lr {
+    .bl-margin-left();
+    .bl-margin-right();
+}
+
+.bl-margin-top {
+    margin-top: @bl-margin;
+}
+
+.bl-margin-bottom {
+    margin-bottom: @bl-margin;
+}
+
+.bl-margin-tb {
+    .bl-margin-top();
+    .bl-margin-bottom();
 }
