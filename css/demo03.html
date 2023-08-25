@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>demo03</title>
+</head>
+
+<body>
+    <css-icon class="icon-close"></css-icon>
+    <css-icon class="icon-apps"></css-icon>
+</body>
+<style type="text/css">
+css-icon {
+    display: inline-block;
+    height: 1em;
+    width: 1em;
+    font-size: 24px;
+    box-sizing: border-box;
+    text-indent: -9999px;
+    vertical-align: middle;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid red;
+    border-radius: 15%;
+}
+
+css-icon::before,
+css-icon::after {
+    content: '';
+    box-sizing: inherit;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.icon-close::before {
+    width: 90%;
+    border-top: 2px solid;
+    -ms-transform: translate(-50%, -50%) rotate(45deg);
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.icon-close::after {
+    height: 90%;
+    border-left: 2px solid;
+    -ms-transform: translate(-50%, -50%) rotate(45deg);
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.icon-apps::before {
+    height: .15em;
+    width: .15em;
+    background: currentColor;
+    box-shadow: -.35em -.35em, -.35em 0, -.35em .35em, 0 -.35em, 0 .35em, .35em -.35em, .35em 0, .35em .35em;
+}
+</style>
+
+</html>
