@@ -10,94 +10,94 @@
 </head>
 
 <body>
-    <a href="">链接</a><br>
-    <input type="text" name="test1"><br>
-    <input type="text" name="test2" disabled>
-    <button onclick="test()">测试</button>
-    <div id="text" class="demo clearFix">
-        <ul class="clearFix">
-            <li><a href="">1</a></li>
-            <li><a href="">2</a></li>
-            <li><a href="">3</a></li>
-            <li><a href="">4</a></li>
-            <li><a href="">5</a></li>
-            <li><a href="">6</a></li>
-            <li><a href="">7</a></li>
-            <li><a href="">8</a></li>
-            <li><a href="">9</a></li>
-            <li><a href="">10</a></li>
-        </ul>
-    </div>
-    <address>测试地址</address>
+<a href="">链接</a><br>
+<input type="text" name="test1"><br>
+<input type="text" name="test2" disabled>
+<button onclick="test()">测试</button>
+<div id="text" class="demo clearFix">
+    <ul class="clearFix">
+        <li><a href="">1</a></li>
+        <li><a href="">2</a></li>
+        <li><a href="">3</a></li>
+        <li><a href="">4</a></li>
+        <li><a href="">5</a></li>
+        <li><a href="">6</a></li>
+        <li><a href="">7</a></li>
+        <li><a href="">8</a></li>
+        <li><a href="">9</a></li>
+        <li><a href="">10</a></li>
+    </ul>
+</div>
+<address>测试地址</address>
 </body>
 <script type="text/javascript">
-function test() {
-    let pdf = new jspdf.jsPDF();
-    pdf.html(document.getElementById('text'), {
-        callback: function(doc) {
-            doc.save('测试.pdf');
-        },
-        x: 0,
-        y: 0
-    });
-}
+    function test() {
+        let pdf = new jspdf.jsPDF();
+        pdf.html(document.getElementById('text'), {
+            callback: function (doc) {
+                doc.save('测试.pdf');
+            },
+            x: 0,
+            y: 0
+        });
+    }
 </script>
 <style type="text/css">
-a:link {
-    color: #666;
-}
+    a:link {
+        color: #666;
+    }
 
-a:visited {
-    color: blue;
-}
+    a:visited {
+        color: blue;
+    }
 
-a:hover {
-    color: #000;
-}
+    a:hover {
+        color: #000;
+    }
 
-a:active {
-    color: #0f0;
-}
+    a:active {
+        color: #0f0;
+    }
 
-input {
-    background-color: green;
-}
+    input {
+        background-color: green;
+    }
 
-input:disabled {
-    background-color: darkgray;
-}
+    input:disabled {
+        background-color: darkgray;
+    }
 
-.demo {
-    border: 1px solid #ccc;
-    width: 30%;
-    margin: 15px auto;
-    padding: 10px;
-}
+    .demo {
+        border: 1px solid #ccc;
+        width: 30%;
+        margin: 15px auto;
+        padding: 10px;
+    }
 
-.demo li {
-    float: left;
-    list-style: none;
-    padding: 5px;
-    border: 1px solid #ccc;
-    margin-right: 5px;
-    width: 20px;
-    border-radius: 25%;
-}
+    .demo li {
+        float: left;
+        list-style: none;
+        padding: 5px;
+        border: 1px solid #ccc;
+        margin-right: 5px;
+        width: 20px;
+        border-radius: 25%;
+    }
 
-.demo a {
-    text-decoration: none;
-    width: 20px;
-    height: 20px;
-    display: block;
-    text-align: center;
-    background-color: #f36;
-    border-radius: 25%;
-}
+    .demo a {
+        text-decoration: none;
+        width: 20px;
+        height: 20px;
+        display: block;
+        text-align: center;
+        background-color: #f36;
+        border-radius: 25%;
+    }
 
-.clearFix {
-    clear: both;
-    overflow: auto;
-}
+    .clearFix {
+        clear: both;
+        overflow: auto;
+    }
 </style>
 
 </html>
